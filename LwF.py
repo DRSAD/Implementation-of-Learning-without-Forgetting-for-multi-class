@@ -16,13 +16,14 @@ def get_one_hot(target,num_class):
 
 class LwFmodel:
 
-    def __init__(self,numclass,feature_extractor,batch_size,epochs,learning_rate):
+    def __init__(self,numclass,feature_extractor,batch_size,epochs,learning_rate,task_size):
         self.epochs=epochs
         self.learning_rate=learning_rate
         self.model = network(numclass,feature_extractor)
         self.exemplar_set = []
         self.class_mean_set = []
         self.numclass = numclass
+        self.task_size=task_size
         self.transform = transforms.Compose([#transforms.Resize(img_size),
                                              transforms.ToTensor(),
                                             transforms.Normalize((0.5071, 0.4867, 0.4408), (0.2675, 0.2565, 0.2761))])
