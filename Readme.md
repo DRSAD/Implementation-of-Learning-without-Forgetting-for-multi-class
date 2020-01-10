@@ -20,6 +20,8 @@ PIL
 
 ## run
 
+Create “model” directory
+
 ```shell
 python -u main.py
 ```
