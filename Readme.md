@@ -32,7 +32,7 @@ python -u main.py
 
 # Result
 
-Resnet18+CIFAR100
+Resnet18+CIFAR100（Incomplete fit）
 
 
 
